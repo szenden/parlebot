@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div id="bannerimage">
+  <form class="form-inline banner_search">
+    <input class="form-control mr-sm-2 size_search" type="search" placeholder="Zoeken" aria-label="Search">
+  </form>
+</div>
+
+<!--<div class="kamerstukken_zoeken">
+      <img src="{% static 'images/kamerstukken_zoeken.jpg' %}" alt="Naar de homepage van Rijksoverheid.nl" id="logotweedekamer" href="{% url 'home' %}">
+    </div>
+  -->
+
+  <!-- parlementarier menu -->
+  <nav class="navbar_portaal navbar-expand-lg navbar-white">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto" style="max-height: 2rem; background-color: #121469;">
+        <li class="portaal_li">
+          <a class=" portaal_link" href="{% url 'parlementarier_portaal' %}">parlementariër portaal
+        </li>
+        <li class="portaal_li">
+          <a class="portaal_link" href="{% url 'parlementarier_kamervragen_stellen' %}">Kamervragen stellen<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="portaal_li">
+          <a class="portaal_link" href="{% url 'parlementarier_kamervragen_bekijken' %}">Ingediende kamervragen bekijken<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- einde -->
+
+<section class="section">
+  <div class="container">
+
+    <!--Intro text -->
+    <div class="row top_kamervraag">
+      <div class="col-sm-9">
+        <h1 class="section_title">Ingediende vragen bekijken<span class="number_vragen"> (4)</span></h1>
+        <div class="content_title">
+          <p class="intro_kamervragen_bekijken">Hieronder vind u een overzicht van de verschillende kamervragen die u aan de regering heeft gesteld. Door op de titel van de kamervraag te klikken opent u de bijbehorende vragen.</p>
+        </div>
+      </div>
+    </div>
+    <!-- einde -->
+
+    <!-- ingediende kamervragen bekijken -->
+    <div class="row">
+
+      <div class="login_box">
+        <article class="card_body">
+          <div class="card_toptitle">
+            <div class="flexer">
+              <h3><a class="card_title" href="/kamervragen_antwoorden_a">BOA wacht lang op politiehulp</a></h3>
+              <div class="card_side">
+                <div class="flexer_between">
+                  <div class="card_pretitle">
+                    14 dec 2018
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_info">
+            <div class="flexer">
+              <div>
+                <p>Aan het ministerie van Justitie en Veiligheid</p></a>
+              </div>
+              <div class="card_side_info">
+                <div class="flexer_between">
+                  <p>2018D0100</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="login_box">
+        <article class="card_body">
+          <div class="card_toptitle">
+            <div class="flexer">
+              <h3><a class="card_title" href="/kamervragen_antwoorden_b">Rechten van personen met een handicap</a></h3>
+              <div class="card_side">
+                <div class="flexer_between">
+                  <div class="card_pretitle">
+                    11 nov 2018
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_info">
+            <div class="flexer">
+              <div>
+                <p>Aan het ministerie van Volksgezondheid, Welzijn en Sport</p>
+              </div>
+              <div class="card_side_info">
+                <div class="flexer_between">
+                  <p>2018D0271</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    
+    </div>
+
+  </div>
+    <!-- einde -->
+
+  </div>
+</section>
+
+{% endblock %}

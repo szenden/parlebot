@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div id="bannerimage">
+<form class="form-inline banner_search">
+      <input class="form-control mr-sm-2 size_search" type="search" placeholder="Zoeken" aria-label="Search">
+    </form>
+</div>
+
+<!--<div class="kamerstukken_zoeken">
+      <img src="{% static 'images/kamerstukken_zoeken.jpg' %}" alt="Naar de homepage van Rijksoverheid.nl" id="logotweedekamer" href="{% url 'home' %}">
+    </div>
+-->
+<nav class="navbar_portaal navbar-expand-lg navbar-white">
+  
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+    <ul class="navbar-nav mr-auto" style="max-height: 2rem; background-color: #121469;">
+      <li class="portaal_li">
+        <a class=" portaal_link" href="{% url 'minister_portaal' %}"> Kamervragen portaal<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="portaal_li">
+        <a class="portaal_link" href="{% url 'kamerstukken_minister' %}">Kamervragen beantwoorden<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="portaal_li">
+        <a class="portaal_link" href="{% url 'kamervragen_antwoorden_bekijken' %}">Verstuurde antwoorden</a>
+      </li>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section class="section">
+
+  <div id="parlebot">
+      <p id="parlebot_title"><img id="parlebot_image" src="{% static 'images/parlebot.png' %}"><br> Parlebot </p>
+
+       <div class="parlebot_container">
+
+    <div class="parlebot_content">
+ <a href="
+https://wetten.overheid.nl/
+BWBR0005290/2016-09-01"><p>
+https://wetten.overheid.nl</p></a>
+    </div>
+  </div>
+  </div>
+ 
+<div class="container">
+  <div class="row">
+	<div class="col-sm-9-minister">
+<article class="card_body">
+	<div class="card_toptitle">
+		<div class="flexer">
+
+<h3>
+<a class="card_title" href="#">Kamervragen beantwoorden</a>
+</h3>
+</div>
+</div>
+
+<div class="card_info_kamervragen_beantwoorden">
+  <div class="lexer_kamervragen_beantwoorden">
+      <div class="title_kamervragen_beantwoorden">
+          <h5>Titel</h5>
+          <div class="title_content_kamervragen_beantwoorden">
+          <p class="p_kamervragen_beantwoorden">Vragen van het lid Öztürk over de productconformiteit van PC’s, laptops, tablets, smart TV’s, slimme thermostaten en andere slimme apparatuur thuis</p>
+        </div>
+        <br>
+        <div class="content_kamervragen_beantwoorden">
+        
+          <img onclick="myFunction()" class="parlebot_image_vraag" src="{% static 'images/parlebot.png' %}">
+        
+          <p class="p_content_kamervragen_beantwoorden">1. Bent u ervan op de hoogte dat in pc’s, laptops, tablets, smart-tv’s, slimme thermostaten 
+                                                    en andere slimme apparatuur thuis, diverse batterijen, processoren, werkgeheugens, opslagcapaciteit en 
+                                                    netwerkkaarten verwerkt zijn, die niet of alleen tegen hele hoge kosten vervangen kunnen worden?</p>
+        </div>
+        <div class="content_kamervragen_beantwoorden">
+          <p class="p_content_kamervragen_beantwoorden" style="overflow: hidden;">Antwoord&nbsp;&nbsp;<img id="down-arrow" src="{% static 'images/down-arrow.png' %}"></p>
+          <div>
+            <form class="form-inline">
+      <textarea class="invoeren_kamervragen_stellen" type="Invoer" aria-label="Invoer"> </textarea>
+    </form>
+          </div>
+
+           <div class="card_info">
+                <form action="{% url 'kamervragen_antwoorden_versturen' %}">
+                  <input class="wachtwoord_vergeten_verstuur" type="submit" value="verstuur">
+                </form>
+              </div>
+
+          <script>
+function myFunction() {
+  var x = document.getElementById("parlebot");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+                      <script>
+            var coll = document.getElementsByClassName("parlebot_container");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+
+          <script>
+var coll = document.getElementsByClassName("p_content_kamervragen_beantwoorden");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+        </div>
+      </div>
+  </div>
+  </div>
+</article>
+	</div>
+  </div>
+</div>
+   </section>
+{% endblock %}

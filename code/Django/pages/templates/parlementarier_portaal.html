@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div id="bannerimage">
+  <form class="form-inline banner_search">
+    <input class="form-control mr-sm-2 size_search" type="search" placeholder="Zoeken" aria-label="Search">
+  </form>
+</div>
+
+<!--<div class="kamerstukken_zoeken">
+      <img src="{% static 'images/kamerstukken_zoeken.jpg' %}" alt="Naar de homepage van Rijksoverheid.nl" id="logotweedekamer" href="{% url 'home' %}">
+    </div>
+  -->
+
+  <nav class="navbar_portaal navbar-expand-lg navbar-white">
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="max-height: 2rem; background-color: #121469;">
+          <li class="portaal_li">
+            <a class=" portaal_link" href="{% url 'parlementarier_portaal' %}"> Kamervragen portaal<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="portaal_li">
+            <a class="portaal_link" href="{% url 'parlementarier_kamervragen_stellen' %}"> Kamervragen stellen<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="portaal_li">
+            <a class="portaal_link" href="{% url 'parlementarier_kamervragen_bekijken' %}">Ingediende antwoorden bekijken</a>
+          </li>
+      </div>
+      </li>
+      </ul>
+      </div>
+    </nav>
+
+
+<section class="section">
+  <div class="container">
+
+    <!--Intro text -->
+    <div class="row top_kamervraag">
+      <div class="col-sm-9">
+        <h1 class="section_title">Parlementariër portaal</h1>
+      </div>
+    </div>
+    <!-- einde -->
+
+    <!-- Inlog formulier -->
+    <div class="row">
+
+      <div class="login_box">
+        <article class="card_body">
+          <div class="card_toptitle">
+            <div class="flexer">
+              <h3 class="card_title">Menu</h3>
+            </div>
+          </div>
+          <div class="card_info">
+            <form action="{% url 'parlementarier_kamervragen_stellen' %}">
+              <input class="parlementarier_menu_button" type="submit" value="Kamervragen stellen">
+            </form><br>
+            <form action="{% url 'parlementarier_kamervragen_bekijken' %}">
+              <input class="parlementarier_menu_button" type="submit" value="Ingediende kamervragen bekijken">
+            </form>
+        </article>
+      </div>
+
+     </div> 
+    <!-- einde -->
+
+  </div>
+</section>
+{% endblock %}

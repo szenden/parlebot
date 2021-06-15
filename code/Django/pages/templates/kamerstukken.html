@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div id="bannerimage">
+<form class="form-inline banner_search">
+      <input class="form-control mr-sm-2 size_search" type="search" placeholder="Zoeken" aria-label="Search">
+    </form>
+</div>
+
+<!--<div class="kamerstukken_zoeken">
+      <img src="{% static 'images/kamerstukken_zoeken.jpg' %}" alt="Naar de homepage van Rijksoverheid.nl" id="logotweedekamer" href="{% url 'home' %}">
+    </div>
+-->
+
+<section class="section">
+<div class="container">
+  <div class="row top_kamervraag">
+  	<div class="col-sm-9">
+  		<h1 class="section_title">
+  			Kamervragen
+  			<span class="number_vragen">(64.502)</span>
+  		</h1>
+  		<div class="content_title">
+  			<p class="intro">
+  				Hieronder staat een overzicht van de verschillende soorten Kamervragen die Kamerleden aan de regering hebben gesteld. Ook vindt u hier de antwoorden van de bewindspersonen. Kamervragen die niet binnen de termijn (drie weken of na een uitstelbericht zes weken) zijn beantwoord, vindt u via</p>
+  				<a href="https://www.tweedekamer.nl/kamerstukken/kamervragen/kamervragen-die-niet-binnen-de-termijn-zijn-beantwoord" class="intro">deze pagina</a>
+  		</div>
+  	</div>
+  </div>
+  <div class="row">
+	<div class="col-sm-9">
+<article class="card_body">
+	<div class="card_toptitle">
+		<div class="flexer">
+
+<h3>
+<a class="card_title" href="/kamerstukken/kamervragen/detail?id=2018Z24810&amp;did=2018D61882">Kamervragen</a>
+</h3>
+<div class="card_side">
+  <div class="flexer_between">
+    <div class="card_pretitle">
+28 dec 2018
+   
+		</div>
+    <a href="/downloads/document?id=34cbc12d-8441-4d0f-818d-714fcedead31&amp;title=Het%20bericht%20%27Goederenlocomotief%20blokkeert%20weg%20na%20ontsporing%27.pdf"><img src="{% static 'images/download.png' %}" alt="Naar de homepage van Rijksoverheid.nl" id="download_icon"></a>
+	</div>
+  </div>
+</div>
+</div>
+<div class="card_info">
+  <div class="flexer">
+      <div>
+        <a href="/kamerstukken/kamervragen/detail?id=2019Z00035&amp;did=2019D00089">
+          <p>Het inhuren van KPMG</p>
+        </a>
+      </div>
+      <div class="card_side_info">
+        <div class="flexer_between">
+          <a class="code_nummer" href="/kamerstukken/kamervragen/detail?id=2019Z00035&amp;did=2019D00089">2019D00089</a>
+        </div>
+        <div>
+<strong>Indiener</strong>
+<a href="/kamerleden_en_commissies/alle_kamerleden/raak-aagm-van-sp">Ronald van Raak</a>
+<div>
+Kamerlid 
+<a href="/kamerleden_en_commissies/fracties/sp">SP</a>
+</div>
+        </div>
+      </div>
+  </div>
+  </div>
+</article>
+	</div>
+  </div>
+</div>
+   </section>
+{% endblock %}
